@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="stylebtvn-b5.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="cart-icon">
+            <span class="material-icons">shopping_cart</span>
+        </div>
+        <div class="search-bar-n-home-button">
+            <div class="material-icons home-icon">home</div>
+            <div class="search-bar-container">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" placeholder="What do you want to play?">
+            </div>
+        </div>
+        <div class="notification-n-account">
+            <span class="material-icons icon-bar">notifications</span>
+            <span class="material-icons icon-bar">groups</span>
+            <div class="profile-icon">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="library-header">
+            <div class="library-left">
+                <span class="material-icons">library_books</span>
+                <span class="library-title">Your Library</span>
+            </div>
+            <div class="library-actions">
+                <span class="material-icons action-icon">add</span>
+                <span class="material-icons action-icon">arrow_forward</span>
+            </div>
+        </div>
+        <br>
+        <div class="nav-buttons">
+            <button class="nav-button">Playlists</button>
+            <button class="nav-button">Podcasts</button>
+            <button class="nav-button">Albums</button>
+            <span class="material-icons arrow-icon">arrow_forward</span>
+        </div>
+        <br>
+        <div class="search-recents">
+            <span class="material-icons search-icon">search</span>
+            <div class="recents">
+                <span class="recents-text">Recents</span>
+                <span class="material-icons recents-icon">list</span>
+            </div>
+        </div>
+        <br>
+        <ul class="library-list">
+            <li>
+                <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8470d229cb865e8d81cdce0889" alt="Liked Songs">
+                <div class="item-info">
+                    <p class="title">Liked Songs</p>
+                    <p class="subtitle">Playlist · 2,719 songs</p>
+                </div>
+            </li>
+            <li>
+                <img src="https://i.scdn.co/image/ab67616d0000b2735f62869dccca7d2ed9ffb497" alt="Yêu và Đi">
+                <div class="item-info">
+                    <p class="title">Yêu và Đi</p>
+                    <p class="subtitle">Album · Mùn Gỗ</p>
+                </div>
+            </li>
+            <li>
+                <img src="https://i.scdn.co/image/ab67616d00001e026757991972533d941e08b104" alt="For EveryMan">
+                <div class="item-info">
+                    <p class="title">For EveryMan</p>
+                    <p class="subtitle">Album · JackSon Browne</p>
+                </div>
+            </li>
+            <li>
+                <img src="https://i.scdn.co/image/ab67656300005f1f14c5ffb64825fd445eebd773" alt="Giải mã">
+                <div class="item-info">
+                    <p class="title">Giải mã</p>
+                    <p class="subtitle">Podcast · VnExpress</p>
+                </div>
+            </li>
+            <li>
+                <img src="https://i.scdn.co/image/ab67656300005f1f1d5a70acfdb6f6747bb64f4a" alt="Orca">
+                <div class="item-info">
+                    <p class="title">Orca</p>
+                    <p class="subtitle">Podcast · carl125</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d00001e02d27b89af98162dab6a9b2da2" alt="Album Cover">
+            <div class="song-details">
+                <p class="song-title">OK - Teddy Doox Remix</p>
+                <p class="song-artist">Teddy Doox, Binz</p>
+            </div>
+        </div>
+        <div class="controls-n-progress-bar">
+            <div class="controls">
+                <span class="material-icons control-icon">shuffle</span>
+                <span class="material-icons control-icon">skip_previous</span>
+                <span class="material-icons play-icon">play_arrow</span>
+                <span class="material-icons control-icon">skip_next</span>
+                <span class="material-icons control-icon">repeat</span>
+            </div>
+            <div class="progress-bar">
+                <span class="current-time">1:02</span>
+                <input type="range" class="progress" min="0" max="100" value="30">
+                <span class="total-time">3:27</span>
+            </div>
+        </div>
+        <div class="settings">
+            <span class="material-icons">volume_up</span>
+            <input type="range" class="volume" min="0" max="100" value="70">
+            <span class="material-icons">fullscreen</span>
+        </div>
+    </div>
+</body>
+</html>
