@@ -39,3 +39,4 @@ rectangle.addEventListener(
         rectangle.style.display = "none";
     }
 )
+
