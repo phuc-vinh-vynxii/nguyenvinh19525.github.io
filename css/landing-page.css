@@ -115,7 +115,7 @@ header .navbar-responsive .start-button a {
 .home-section {
     padding-top: 150px;
     padding-bottom: 100px;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('/image/pic1.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../image/pic1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateY(-100px);
@@ -204,6 +204,7 @@ header .navbar-responsive .start-button a {
     gap: 16px;
     color: #555555;
 }
+
 .home-section .register-box .input-box {
     padding-left: 10px;
     height: 50px;
