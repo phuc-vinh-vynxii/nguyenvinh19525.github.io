@@ -115,10 +115,10 @@ header .navbar-responsive .start-button a {
 .home-section {
     padding-top: 150px;
     padding-bottom: 100px;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../image/pic1.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/pic1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateY(-100px);
+    transform: translateY(-100px);  
 }
 .home-section .container {
     width: 75%;
@@ -250,6 +250,19 @@ header .navbar-responsive .start-button a {
 .home-section .register-box .register-footer .dot-icon {
     font-size: 4px;
 }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+.pulse {
+    animation: pulse 0.5 ease-in-out;
+}
 
 /* partner section */
 .partners-section {
@@ -365,6 +378,12 @@ header .navbar-responsive .start-button a {
     box-shadow: 10px 5px 20px 0 rgba(1, 0, 0, 0.2);
     border-radius: 20px;
     object-fit: cover;
+}
+.discover-section .container .discover-image {
+    opacity: 0;
+}
+.discover-section .container .discover-image.slideInLeft {
+    opacity: 100%;
 }
 .discover-section .container .discover-describe {
     color: #7C8595;
@@ -699,6 +718,12 @@ header .navbar-responsive .start-button a {
     font-size: 28px;
     color: #fff;
 }
+.portfolio-section .portfolio-animation {
+    opacity: 0;
+}
+.portfolio-section .portfolio-animation.fadeIn {
+    opacity: 1;
+}
 /* team section */
 .team-section {
     background-color: #F1FAFF;
@@ -912,6 +937,12 @@ header .navbar-responsive .start-button a {
 .feature-section .container .row .col {
     display: flex;
 }
+.col-features {
+    opacity: 0;
+}
+.col-features.fadeIn {
+    opacity: 1;
+}
 .fa-screwdriver-wrench {
     color: #a9d129;
 }
@@ -1053,6 +1084,12 @@ header .navbar-responsive .start-button a {
 .price-section .container .row .monthly-price .start-button:hover {
     color: #FFFFFF;
 }
+.price-section .container .price-box {
+    opacity: 0;
+}
+.price-section .container .price-box.bounceIn {
+    opacity: 1;
+}
 /*question section */
 .question-section {
     padding: 100px 0;
@@ -1139,6 +1176,10 @@ header .navbar-responsive .start-button a {
 .contact-section .container .row .contact-box {
     width: 70%;
 }
+.contact-section .container .row .contact-box.bounceIn
+{
+    opacity: 1;
+}
 .contact-section .container .row .contact-form {
     display: flex;
     flex-wrap: wrap;
@@ -1216,11 +1257,14 @@ footer {
     padding: 40px 0;
     background-color: #FCFCFC;
 }
-footer .row {
-    display: flex;
-    justify-content: center;
+footer .container {
     width: 80%;
     max-width: 1200px;
+    margin-inline: auto;
+}
+footer .container .row {
+    display: flex;
+    justify-content: center;
 }
 footer .row .left-col {
     font-size: 18px;
@@ -1232,7 +1276,7 @@ footer .row .left-col a {
     color: #E62F37;
 }
 footer .row .middle-col {
-    width: 35%;
+    width: 20%;
 }
 footer .row .right-col {
     display: flex;
@@ -1269,7 +1313,6 @@ footer .row .right-col a {
 {
     color: #1e90ff;
 }
-/* responsive max-width: 991px */
 
 /* responsive mobile max-width: 767px */
 @media screen and (max-width: 767px) {
@@ -1407,7 +1450,7 @@ footer .row .right-col a {
     }
     /*footer*/
     footer .container {
-        width: 80%;
+        width: 60%;
     }
     footer .container .row .middle-col {
         display: none;
@@ -1422,6 +1465,101 @@ footer .row .right-col a {
         width: 100%;
     }
     footer .container .row .left-col {
-        margin-left: 200px;
+        margin-left: 80px;
     }
+    footer .container .row .right-col{
+        margin-right: 100px;
+    }
+}
+/* responsive max-width: 991px */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .navbar-button {
+        display: inline-block;
+    }
+    .navbar-element {
+        display: none;
+    }
+    /*discover-section*/
+    .discover-section .container {
+        width: 90%;
+    }
+    .discover-section .container .row .image {
+        width: 48%;
+    }
+    .discover-section .container .row .discover-describe {
+        width: 50%;
+    }
+    .discover-section .container .row .image img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    /*task-section*/
+    .task-section .container {
+        width: 95%;
+    }
+    .task-section .container .row {
+        gap: 0;
+    }
+    .task-section .container .row .task-box {
+        width: 50%;
+    }
+    .task-section .container .row .task-pic {
+        width: 48%;
+    }
+    .task-section .container .row .task-pic img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .task-section .container .row .task-item {
+        padding: 90px 15px;
+    }
+}
+/* min-width: 1024px */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounceIn {
+    animation: bounceIn 0.5s ease-in-out;
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slideInLeft {
+    animation: slideInLeft .5s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn .5s ease-in-out;
 }
